@@ -1,0 +1,22 @@
+::ng-deep #chart {
+    height: 440px;
+}
+
+dx-chart{
+    width: 400px;
+    flex: 33.33%;
+    padding: 5px;
+    height: 600px;
+    border-style: inherit;
+    border-color: brown;
+    border-width: 1px;
+}
+
+.row{
+    display: flex;
+}
+
+/* .column{
+    flex: 33.33%;
+    padding: 5px;
+} */

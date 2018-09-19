@@ -1,0 +1,31 @@
+    <h1 align= center>YARD</h1>
+    <div>
+        <div class= "row"  style="border-style: solid; border-width: 0px">
+        <dx-chart class="column" style="padding-left:50px; padding-right: 50px; margin: 25px"
+            *ngFor="let countriesInfo of countriesInfos"
+            [dataSource]="countriesInfo">
+            <dxi-series valueField="occd" name="Occupied Dry slots"></dxi-series>
+            <dxi-series valueField="freed" name="Free Dry slots"></dxi-series>
+            <dxi-series valueField="occr" name="Occupied Reefer slots"></dxi-series>
+            <dxi-series valueField="freer" name="Free Reefer slots"></dxi-series>
+            <!--<dxi-series valueField="nuclear" name="Nuclear"></dxi-series>-->
+            <dxo-common-series-settings
+                argumentField="time"
+                type="fullStackedBar">
+            </dxo-common-series-settings>
+            <dxo-legend
+                verticalAlignment="top"
+                horizontalAlignment="center"
+                itemTextPosition="right">
+            </dxo-legend>
+            <!-- <dxo-title text="Yard View">
+                <dxo-subtitle text="(hourly Basis)"></dxo-subtitle>
+            </dxo-title> -->
+            <!--<dxo-export [enabled]="true"></dxo-export>-->
+            <dxo-tooltip
+                [enabled]="true"
+                [customizeTooltip]="customizeTooltip">
+            </dxo-tooltip>
+        </dx-chart>
+    </div>
+</div>
